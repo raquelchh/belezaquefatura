@@ -1,7 +1,8 @@
 const COURSES = [
   { id:'curso-sobrancelhas', area:'Sobrancelhas', title:'Design de sobrancelhas do zero', description:'Curso para conhecer técnicas de design, simetria, mapeamento e atendimento.', level:'Iniciantes', platform:'Hotmart', link:'' },
   { id:'curso-cilios', area:'Cílios', title:'Extensão de cílios: primeiros passos', description:'Formação introdutória sobre materiais, preparação, aplicação e cuidados.', level:'Iniciantes', platform:'Hotmart', link:'' },
-  { id:'curso-maquiagem', area:'Maquiagem', title:'Maquiagem profissional para iniciantes', description:'Conteúdos de preparação de pele, técnicas de olhos e maquiagem social.', level:'Iniciantes', link:'' },
+  { id:'curso-maquiagem', area:'Maquiagem', title:'Maquiagem profissional para iniciantes', description:'Conteúdos de preparação de pele, técnicas de olhos e maquiagem social.', level:'Iniciantes', platform:'Hotmart', link:'' },
+  { id:'curso-manicure', area: 'Manicure', title: 'Manicure Profissional do zero', description:'Aprenda técnicas de manicure, preparação das unhas, esmaltação. cuidados e atendimento profissional.', level: 'Iniciantes', platform: 'Hotmart', link: '',}
 ];
 
 const KITS = {
@@ -19,6 +20,11 @@ const KITS = {
     {name:'Kit de pincéis e esponjas',store:'Shopee',link:''},
     {name:'Maleta organizadora de maquiagem',store:'Mercado Livre',link:''},
     {name:'Paleta de maquiagem',store:'Amazon',link:''}
+  ],
+  manicure: [
+    {name: 'Kit completo de manicure para iniciantes', store: 'Shopee', link: ''},
+    {name: 'Alicate profissional e espátula para unhas', store: 'Mercado Livre', link: ''},
+    {name: 'Kit de esmaltes e acessórios para mnicure', store : 'Amazon', link: ''}
   ]
 };
 

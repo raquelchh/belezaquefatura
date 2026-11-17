@@ -1,8 +1,9 @@
 const COURSES = [
   { id:'curso-sobrancelhas', area:'Sobrancelhas', title:'Design de sobrancelhas do zero', description:'Curso para conhecer técnicas de design, simetria, mapeamento e atendimento.', level:'Iniciantes', platform:'Hotmart', link:'' },
   { id:'curso-cilios', area:'Cílios', title:'Extensão de cílios: primeiros passos', description:'Formação introdutória sobre materiais, preparação, aplicação e cuidados.', level:'Iniciantes', platform:'Hotmart', link:'' },
-  { id:'curso-maquiagem', area:'Maquiagem', title:'Maquiagem profissional para iniciantes', description:'Conteúdos de preparação de pele, técnicas de olhos e maquiagem social.', level:'Iniciantes', link:'' }
+  { id:'curso-maquiagem', area:'Maquiagem', title:'Maquiagem profissional para iniciantes', description:'Conteúdos de preparação de pele, técnicas de olhos e maquiagem social.', level:'Iniciantes', link:'' },
 ];
+
 const KITS = {
   sobrancelhas:[
     {name:'Kit básico para design de sobrancelhas',store:'Shopee',link:''},

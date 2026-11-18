@@ -2,14 +2,14 @@ const COURSES = [
   { id:'curso-sobrancelhas', area:'Sobrancelhas', title:'Design de sobrancelhas do zero', description:'Curso para conhecer técnicas de design, simetria, mapeamento e atendimento.', level:'Iniciantes', link:'https://go.hotmart.com/X108541901P?dp=1' },
   { id:'curso-cilios', area:'Cílios', title:'Extensão de cílios: primeiros passos', description:'Formação introdutória sobre materiais, preparação, aplicação e cuidados.', level:'Iniciantes', link:'https://go.hotmart.com/X108542156P?dp=1' },
   { id:'curso-maquiagem', area:'Maquiagem', title:'Maquiagem profissional para iniciantes', description:'Conteúdos de preparação de pele, técnicas de olhos e maquiagem social.', level:'Iniciantes', link:'https://go.hotmart.com/L108542089Y?dp=1' },
-  { id:'curso-manicure', area: 'Manicure', title: 'Manicure Profissional do zero', description:'Aprenda técnicas de manicure, preparação das unhas, esmaltação. cuidados e atendimento profissional.', level: 'Iniciantes', link: 'https://go.hotmart.com/I108542127Y?dp=1',}
+  { id:'curso-manicure', area: 'Manicure', title: 'Manicure Profissional do zero', description:'Aprenda técnicas de manicure, preparação das unhas, esmaltação, cuidados e atendimento profissional.', level: 'Iniciantes', link: 'https://go.hotmart.com/I108542127Y?dp=1',}
 ];
 
 const KITS = {
   sobrancelhas:[
-    {name:'Kit básico para design de sobrancelhas',store:'Shopee',link:''},
-    {name:'Pinças e acessórios de precisão',store:'Mercado Livre',link:''},
-    {name:'Henna e materiais para treino',store:'Amazon',link:''}
+    {name:'Kit básico para design de sobrancelhas', link:''},
+    {name:'Pinças e acessórios de precisão',link:''},
+    {name:'Henna e materiais para treino', link:''}
   ],
   cilios:[
     {name:'Kit de cílios para treino',store:'Shopee',link:''},
@@ -51,8 +51,8 @@ function renderCourses(){
 function renderKit(area){
   const list = KITS[area] || [];
   document.querySelector('#kitItems').innerHTML = list.map(item => `
-    <div class="kit-item"><div><b>${escapeHTML(item.name)}</b><small>${escapeHTML(item.store)} · vendedor externo</small></div>
-    ${affiliateAnchor(item.link,'Ver produto →','kit-link')}</div>`).join('');
+    <div class="kit-item"><div><b>${escapeHTML(item.name)}</b><small></small></div>
+    ${affiliateAnchor(item.link,'Ver produto em oferta→','kit-link')}</div>`).join('');
 }
 
 renderCourses();

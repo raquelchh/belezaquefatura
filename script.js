@@ -1,8 +1,8 @@
 const COURSES = [
-  { id:'curso-sobrancelhas', area:'Sobrancelhas', title:'Design de sobrancelhas do zero', description:'Curso para conhecer técnicas de design, simetria, mapeamento e atendimento.', level:'Iniciantes', platform:'Hotmart', link:'' },
-  { id:'curso-cilios', area:'Cílios', title:'Extensão de cílios: primeiros passos', description:'Formação introdutória sobre materiais, preparação, aplicação e cuidados.', level:'Iniciantes', platform:'Hotmart', link:'' },
-  { id:'curso-maquiagem', area:'Maquiagem', title:'Maquiagem profissional para iniciantes', description:'Conteúdos de preparação de pele, técnicas de olhos e maquiagem social.', level:'Iniciantes', platform:'Hotmart', link:'' },
-  { id:'curso-manicure', area: 'Manicure', title: 'Manicure Profissional do zero', description:'Aprenda técnicas de manicure, preparação das unhas, esmaltação. cuidados e atendimento profissional.', level: 'Iniciantes', platform: 'Hotmart', link: '',}
+  { id:'curso-sobrancelhas', area:'Sobrancelhas', title:'Design de sobrancelhas do zero', description:'Curso para conhecer técnicas de design, simetria, mapeamento e atendimento.', level:'Iniciantes', link:'https://go.hotmart.com/X108541901P?dp=1' },
+  { id:'curso-cilios', area:'Cílios', title:'Extensão de cílios: primeiros passos', description:'Formação introdutória sobre materiais, preparação, aplicação e cuidados.', level:'Iniciantes', link:'https://go.hotmart.com/X108542156P?dp=1' },
+  { id:'curso-maquiagem', area:'Maquiagem', title:'Maquiagem profissional para iniciantes', description:'Conteúdos de preparação de pele, técnicas de olhos e maquiagem social.', level:'Iniciantes', link:'https://go.hotmart.com/L108542089Y?dp=1' },
+  { id:'curso-manicure', area: 'Manicure', title: 'Manicure Profissional do zero', description:'Aprenda técnicas de manicure, preparação das unhas, esmaltação. cuidados e atendimento profissional.', level: 'Iniciantes', link: 'https://go.hotmart.com/I108542127Y?dp=1',}
 ];
 
 const KITS = {
@@ -43,8 +43,8 @@ function renderCourses(){
       <span class="course-area">Trilha de ${escapeHTML(course.area)}</span>
       <h3>${escapeHTML(course.title)}</h3>
       <p>${escapeHTML(course.description)}</p>
-      <div class="course-meta">${escapeHTML(course.level)} · Plataforma: ${escapeHTML(course.platform)}</div>
-      ${affiliateAnchor(course.link,'Conhecer curso →','button button-primary')}
+      <div class="course-meta">${escapeHTML(course.level)}</div>
+      ${affiliateAnchor(course.link,'Começar trilha →','button button-primary')}
     </article>`).join('');
 }
 
@@ -66,7 +66,7 @@ document.querySelectorAll('.kit-tab').forEach(button => {
 
 document.addEventListener('click', event => {
   const missing = event.target.closest('[data-missing-link]');
-  if(missing){event.preventDefault();alert('Este link ainda não foi configurado. Adicione seu link de afiliado no arquivo script.js.');}
+  if(missing){event.preventDefault();alert('Este link ainda não foi configurado. Adicione link no arquivo script.js.');}
 });
 
 const menuToggle = document.querySelector('#menuToggle');

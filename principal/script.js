@@ -49,11 +49,11 @@ function renderCourses(){
 }
 
 function renderKit(area){
-  const list = KITS[area] || [];
+  const list = (KITS[area] || []).filter(item => item.link);
   document.querySelector('#kitItems').innerHTML = list.map(item => `
-    <div class="kit-item"><div><b>${escapeHTML(item.name)}</b><small></small></div>
-    ${affiliateAnchor(item.link,'Ver produto em oferta→','kit-link')}</div>`).join('');
-}
+    <div class="kit-item"><div><b>${escapeHTML(item.name)}</b></div>
+    ${affiliateAnchor(item.link,'Ver produto →','kit-link')}</div>`).join('');
+} 
 
 renderCourses();
 renderKit('sobrancelhas');
@@ -81,24 +81,29 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click',()=>{
 
 const header = document.querySelector('#header');
 window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>10),{passive:true});
-document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelector('#year').textContent = new Date().getFullYear(); 
 
-// Consentimento simples para cookies não essenciais. Integre analytics somente após consentimento.
-const cookieBanner = document.querySelector('#cookieBanner');
-try {
-  const choice = localStorage.getItem('beauty-cookie-choice');
-  if(!choice) cookieBanner.hidden = false;
-} catch(error) { cookieBanner.hidden = false; }
-function saveCookieChoice(choice){
-  try{localStorage.setItem('beauty-cookie-choice',choice);}catch(error){}
-  cookieBanner.hidden = true;
-  // Adicione aqui a inicialização do Meta Pixel/Google Analytics se houver consentimento.
-}
-document.querySelector('#acceptCookies').addEventListener('click',()=>saveCookieChoice('accepted'));
-document.querySelector('#rejectCookies').addEventListener('click',()=>saveCookieChoice('rejected'));
+     // inicialização do Meta Pixel/Google Analytics se houver consentimento.
+    // form: precisa de um serviço de e-mail para armazenar inscrições reais.
 
-// Formulário demonstrativo: precisa de um serviço de e-mail para armazenar inscrições reais.
-document.querySelector('#newsletterForm').addEventListener('submit',event=>{
-  event.preventDefault();
-  document.querySelector('#newsletterMessage').textContent='Layout demonstrativo: conecte um serviço de e-mail para receber inscrições.';
-});
+const newsletterForm = document.querySelector('#newsletterForm');
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    const msg = document.querySelector('#newsletterMessage');
+    if (GOOGLE_FORM_URL.includes('SEU_ID')) {
+      msg.textContent = 'Formulário ainda não conectado.';
+      return;
+    }
+    const body = new URLSearchParams();
+    body.append(GOOGLE_FIELD, document.querySelector('#email').value.trim());
+    try {
+      await fetch(GOOGLE_FORM_URL, { method: 'POST', mode: 'no-cors', body });
+      newsletterForm.reset();
+      msg.textContent = 'Pronto! Seu e-mail foi cadastrado.';
+    } catch (error) {
+      msg.textContent = 'Não foi possível enviar agora. Tente de novo.';
+    }  
+  });
+} 
+

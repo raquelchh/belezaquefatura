@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f8c4b5">
-  <meta name="description" content="Encontre cursos de beleza para começar em cílios, maquiagem e sobrancelhas, além de kits e materiais para seus primeiros atendimentos.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Encontre cursos de beleza para começar em sobrancelhas, cílios, maquiagem e manicure, além de kits e materiais para seus primeiros atendimentos.">
   <meta property="og:title" content="Beleza que Fatura | Aprenda, pratique e comece">
   <meta property="og:description" content="Cursos de beleza selecionados e kits para dar os primeiros passos na profissão.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -42,7 +41,7 @@
         <div class="hero-copy">
           <span class="eyebrow">Cursos de beleza · Kit para começar</span>
           <h1>Aprenda uma profissão em beleza e comece a construir <em>seu próprio negócio.</em></h1>
-          <p class="hero-text">Encontre cursos online de cílios, maquiagem e sobrancelhas, compare opções e descubra os materiais para dar seus primeiros passos.</p>
+          <p class="hero-text">Encontre cursos online de sobrancelhas, cílios, maquiagem e manicure, compare opções e descubra os materiais para dar seus primeiros passos.</p>
           <div class="hero-actions"><a class="button button-primary" href="#trilhas">Descobrir meu curso <span>→</span></a></div>
           <ul class="hero-points"><li>Aulas online</li><li>Opções para iniciantes</li><li>Cursos e kits em um só lugar</li></ul>
         </div>
@@ -84,22 +83,20 @@
       <div class="container">
         <div class="section-heading"><span class="eyebrow">Cursos online</span><h2>Encontre um curso para dar o próximo passo</h2><p>Veja a proposta de cada formação e acesse a página oficial do produtor para conferir conteúdo, preço, condições e garantia.</p></div>
         <div class="course-list" id="courseList"></div>
-        <p class="disclaimer">Os cursos são oferecidos por produtores independentes. Antes de comprar, confira a descrição, o conteúdo programático e as condições diretamente na página oficial.</p>
+        <p class="disclaimer">Os cursos são oferecidos por produtores independentes. Antes de comprar, confira a descrição, o conteúdo programático e as condições na página oficial. Alguns links desta página são de afiliado.</p>
       </div>
     </section>
 
     <section class="kits section" id="kits">
       <div class="container kits-layout">
-        <div class="kits-intro"><span class="eyebrow">Materiais para praticar</span><h2>Monte seu kit sem complicação</h2><p>Depois de escolher o curso, veja sugestões de materiais e equipamentos em oferta e desconto para estudar e praticar.</p><div class="store-pills"></div></div>
+        <div class="kits-intro"><span class="eyebrow">Materiais para praticar</span><h2>Monte seu kit sem complicação</h2><p>Depois de escolher o curso, veja sugestões de materiais para estudar e praticar. Confira preço e frete no anúncio recomendado.</p><div class="store-pills"></div></div>
         <div class="kit-panel"><div class="kit-tabs" role="tablist" aria-label="Escolha a área do kit"><button class="kit-tab active" data-kit="sobrancelhas" role="tab" aria-selected="true">Sobrancelhas</button><button class="kit-tab" data-kit="cilios" role="tab" aria-selected="false">Cílios</button><button class="kit-tab" data-kit="maquiagem" role="tab" aria-selected="false">Maquiagem</button>
-        <button class="kit-tab active" data-kit="manicure" role="tab" aria-selected="true">Manicure</button>
+        <button class="kit-tab" data-kit="manicure" role="tab" aria-selected="false">Manicure</button>
         </div><div id="kitItems" class="kit-items"></div></div>
       </div>
     </section>
 
-    
-
-
+  
     <section class="faq section" id="faq">
       <div class="container faq-layout"><div><span class="eyebrow">Estamos aqui para ajudar</span><h2>Dúvidas rápidas</h2><p>Informações importantes antes de escolher um curso ou produto.</p></div><div class="faq-list">
         <details><summary>O Beleza que Fatura vende os cursos?</summary><p>Não. O site apresenta e recomenda cursos oferecidos por produtores independentes. Ao clicar em um curso, você será direcionada à página oficial de venda, como a Hotmart, quando esse for o canal utilizado pelo produtor.</p></details>
@@ -108,15 +105,23 @@
       </div></div>
     </section>
 
+    <!--
     <section class="newsletter section">
       <div class="container newsletter-box"><div><span class="newsletter-icon">✉</span><div><h2>Receba novidades e dicas</h2><p>Conteúdos sobre cursos, beleza e empreendedorismo.</p></div></div><form id="newsletterForm"><label class="sr-only" for="email">Seu e-mail</label><input id="email" type="email" placeholder="Seu e-mail" required><button class="button button-primary" type="submit">Quero receber →</button><small id="newsletterMessage">Ao se cadastrar, você concorda em receber comunicações por e-mail.</small></form></div>
     </section>
+  -->
   </main>
 
-  <footer class="footer"><div class="container footer-grid"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">✿</span><span>Beleza <b>que Fatura</b></span></a><p>alguns links são de afiliado. Responsabilidade de seus respectivos produtores e vendedores.</p><div class="footer-meta"><span>© <span id="year"></span> Beleza que Fatura</span><a href="#privacidade" id="privacyLink">Privacidade</a></div></div></footer>
-
-  <div class="cookie-banner" id="cookieBanner" hidden><p>Este site pode utilizar cookies para lembrar preferências e, se configurado, medir o desempenho. Você pode aceitar ou recusar cookies não essenciais.</p><div><button id="acceptCookies" class="button button-primary small">Aceitar</button><button id="rejectCookies" class="button button-outline small">Recusar</button></div></div>
-  <a class="back-top" href="#inicio" aria-label="Voltar ao topo">↑</a>
-  <script src="script.js"></script>
+  <footer class="footer">
+  <div class="container footer-grid">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">✿</span><span>Beleza <b>que Fatura</b></span></a>
+    <div class="footer-meta">
+      <span>© <span id="year"></span> Beleza que Fatura</span>
+      <a href="privacidade.html">Privacidade</a>
+      <a href="mailto:belezaquefatura@gmail.com">Contato: belezaque.faturaa@gmail.com</a>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

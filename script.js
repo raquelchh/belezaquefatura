@@ -7,24 +7,24 @@ const COURSES = [
 
 const KITS = {
   sobrancelhas:[
-    {name:'Kit básico para design de sobrancelhas', link:''},
-    {name:'Pinças e acessórios de precisão',link:''},
-    {name:'Henna e materiais para treino', link:''}
+    {name:'Kit básico para design de sobrancelhas', link:'https://meli.la/1qVMS8q'},
+    {name:'Pinças e acessórios de precisão',link:'https://meli.la/1VFj17B'},
+    {name:'Henna e materiais para treino', link:'https://meli.la/26jnkZ7'}
   ],
   cilios:[
-    {name:'Kit de cílios para treino',store:'Shopee',link:''},
-    {name:'Pinças para extensão de cílios',store:'Mercado Livre',link:''},
-    {name:'Fios e acessórios para aplicação',store:'Amazon',link:''}
+    {name:'Kit de cílios para treino',link:'https://meli.la/1xoo7cK'},
+    {name:'Pinças para extensão de cílios',link:'https://meli.la/32whjSL'},
+    {name:'Fios e acessórios para aplicação',link:'https://meli.la/2FikTy5'}
   ],
   maquiagem:[
-    {name:'Kit de pincéis e esponjas',store:'Shopee',link:''},
-    {name:'Maleta organizadora de maquiagem',store:'Mercado Livre',link:''},
-    {name:'Paleta de maquiagem',store:'Amazon',link:''}
+    {name:'Kit de pincéis e esponjas',link:'https://meli.la/23zwzjp'},
+    {name:'Maleta organizadora de maquiagem',link:'https://meli.la/1oGUdP1'},
+    {name:'Paleta de maquiagem',link:'https://meli.la/2TBuP2Q'}
   ],
   manicure: [
-    {name: 'Kit completo de manicure para iniciantes', store: 'Shopee', link: ''},
-    {name: 'Alicate profissional e espátula para unhas', store: 'Mercado Livre', link: ''},
-    {name: 'Kit de esmaltes e acessórios para mnicure', store : 'Amazon', link: ''}
+    {name: 'Kit completo de manicure para iniciantes', link: 'https://meli.la/31JAu7a'},
+    {name: 'Alicate profissional e espátula para unhas', link: 'https://meli.la/1au4C97'},
+    {name: 'Kit de esmaltes e acessórios para manicure', link: 'https://meli.la/1CLTn1v'}
   ]
 };
 

@@ -106,4 +106,35 @@ if (newsletterForm) {
     }  
   });
 } 
+// Contagem regressiva Black Friday 2026
+const countdown = document.querySelector('#countdown');
+// Encerramento: 27/11/2026 às 23h59 (horário de Brasília)
+const deadline = new Date(2026, 10, 28, 0, 0, 0);
+
+function updateCountdown() {
+    const now = new Date();
+    const difference = deadline - now;
+    if (difference <= 0) {
+        countdown.textContent = 'Oferta encerrada';
+        return;
+    }
+    const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+    countdown.textContent =
+        `${days}d ${String(hours).padStart(2, '0')}h ` +
+        `${String(minutes).padStart(2, '0')}min ` +
+        `${String(seconds).padStart(2, '0')}s`;
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
 

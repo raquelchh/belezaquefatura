@@ -66,7 +66,7 @@ document.querySelectorAll('.kit-tab').forEach(button => {
 
 document.addEventListener('click', event => {
   const missing = event.target.closest('[data-missing-link]');
-  if(missing){event.preventDefault();alert('Este link ainda não foi configurado. Adicione link no arquivo script.js.');}
+  if(missing){event.preventDefault();alert('Este link ainda não foi configurado.');}
 });
 
 const menuToggle = document.querySelector('#menuToggle');

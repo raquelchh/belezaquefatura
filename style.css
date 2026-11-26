@@ -55,3 +55,176 @@
         margin: 2px 0;
     }
 }
+
+/* SERVIÇO: LANDING PAGE PROFISSIONAL */
+
+.site-service {
+  background: #fff1eb;
+}
+
+.site-service-box {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 45px;
+  align-items: center;
+  background: linear-gradient(125deg, #4b302d, #70443c);
+  color: #fff9f5;
+  border-radius: 28px;
+  padding: 48px;
+  overflow: hidden;
+  box-shadow: 0 22px 55px rgba(119,66,52,.16);
+}
+
+.site-service-copy h2 {
+  font: 700 clamp(30px, 4vw, 44px)/1.12 'Playfair Display';
+  margin: 18px 0;
+  letter-spacing: -.03em;
+}
+
+.site-service-copy > p {
+  color: #f2dcd3;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.site-service-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+  font-size: 12px;
+  color: #fff1eb;
+}
+
+.site-service-price small,
+.site-service-price strong {
+  display: block;
+}
+
+.site-service-price small {
+  color: #f2dcd3;
+  font-size: 12px;
+}
+
+.site-service-price strong {
+  font: 700 38px 'Playfair Display';
+  color: #ffc0ac;
+  margin: 3px 0 18px;
+}
+
+.site-service-button {
+  background: #f5b5a3;
+  color: #432b27;
+  width: 100%;
+}
+
+.site-service-note {
+  display: block;
+  color: #e9cfc5;
+  font-size: 10px;
+  margin-top: 13px;
+}
+
+.site-service-visual {
+  position: relative;
+  padding: 15px;
+}
+
+.site-mockup {
+  background: #fffaf7;
+  color: #432b27;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,.22);
+  transform: rotate(2deg);
+}
+
+.mockup-top {
+  background: #f7e7df;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.mockup-content {
+  padding: 25px;
+}
+
+.mockup-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #b86d5a;
+}
+
+.mockup-content h3 {
+  font: 700 30px/1.1 'Playfair Display';
+  margin: 13px 0;
+}
+
+.mockup-image {
+  height: 155px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #e9b7a7, #f8ded3);
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 65px;
+}
+
+.mockup-lines {
+  height: 8px;
+  width: 85%;
+  background: #f0ded6;
+  border-radius: 10px;
+  margin-top: 16px;
+}
+
+.mockup-lines.short {
+  width: 55%;
+  margin-top: 8px;
+}
+
+.mockup-contact {
+  display: block;
+  text-align: center;
+  background: #eaa18d;
+  padding: 12px;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.site-service-sticker {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  background: #fff9f5;
+  color: #8d4d3e;
+  padding: 12px 17px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+@media(max-width:650px) {
+  .site-service-box {
+    grid-template-columns: 1fr;
+    padding: 27px 21px;
+    gap: 25px;
+  }
+
+  .site-service-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .site-service-visual {
+    padding: 5px;
+  }
+
+  .mockup-content {
+    padding: 20px;
+  }
+}
